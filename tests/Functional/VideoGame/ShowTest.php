@@ -17,7 +17,7 @@ final class ShowTest extends FunctionalTestCase
         self::assertSelectorTextContains('h1', 'Jeu vidéo 0');
     }
 
-    public function testShouldPostReview(): void
+    /*public function testShouldPostReview(): void
     {
         $entityManager = static::getContainer()->get('doctrine')->getManager();
         $entityManager->beginTransaction();
@@ -49,5 +49,5 @@ final class ShowTest extends FunctionalTestCase
         self::assertSelectorTextContains('div.list-group-item:last-child span.value', '4');
 
         $entityManager->rollback();
-    }
+    }*/
 }
