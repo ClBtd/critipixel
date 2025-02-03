@@ -1,0 +1,8 @@
+parameters:
+    ignoreErrors:
+        - '#Property .+::\$id \(int\|null\) is never assigned int#'
+    level: 6
+    paths:
+        - config/
+        - src/
+        - tests/
