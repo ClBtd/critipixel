@@ -18,6 +18,7 @@ final class RegisterTest extends FunctionalTestCase
 
         self::assertResponseRedirects('/auth/login');
 
+        //@phpstan-ignore-next-line
         $user = $this->getEntityManager()->getRepository(User::class)->findOneByEmail('user@email.com');
 
         $userPasswordHasher = $this->service(UserPasswordHasherInterface::class);

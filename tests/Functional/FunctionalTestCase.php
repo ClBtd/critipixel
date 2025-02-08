@@ -45,6 +45,7 @@ abstract class FunctionalTestCase extends WebTestCase
 
     protected function login(string $email = 'user+0@email.com'): void
     {
+        //@phpstan-ignore-next-line
         $user = $this->service(EntityManagerInterface::class)->getRepository(User::class)->findOneByEmail($email);
 
         $this->client->loginUser($user);
